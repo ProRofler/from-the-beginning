@@ -1,13 +1,11 @@
+// Общий шаблон класса
+template <typename T, int size>
+class Array {
+    // Реализация общего класса
+};
 
-#include <iostream>
-
-
-int main()
-{
-    
-    bool w[5] = {1,1};
-
-    std::cout << w[4] << " Compiled";
-
-    return 0;
-}
+// Частичная специализация для size == 0
+template <typename T>
+class Array<T, 0> {
+    // Специализированная реализация для нулевого размера
+};

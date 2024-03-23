@@ -6,14 +6,14 @@
 
 // Exercise - take a user input of bool datatype, dynamically create an array and return how much true statements are there
 
-
-class BoolArray 
+template <typename T>
+class DynamicArray 
 {
     public:
 
-    BoolArray(){InitializeDynamicArray();};
+    DynamicArray(){InitializeDynamicArray();};
     
-    void InsertElement(bool value, int index)
+    void InsertElement(T value, int index)
     {
         if (index + 1 > capacity)
         {
@@ -49,7 +49,7 @@ class BoolArray
         std::cout << "True statements amount: " << tr << '\n'; 
     }
 
-    ~BoolArray()
+    ~DynamicArray()
     {
         delete[] pMain;
 
@@ -60,13 +60,13 @@ class BoolArray
 
     unsigned int size = 0;
     unsigned int capacity = 2;
-    bool *pMain = nullptr; // main array
+    T *pMain = nullptr; // main array
     
-    void CountSize()
+    void CountSize() //attempt to count size of an array but it wont work
     {
         for (int i = 0; i <= capacity; i++)
         {
-            if (pMain[i] <= 1)
+            if (pMain[i] <= 1) //this will alway result in true
             {
                 size = i;
                 std::cout << "Element: " << i << " Value: " << pMain[i] << '\n'; 
@@ -81,7 +81,7 @@ class BoolArray
     }
     void DoubleCapacity()
     {
-        bool *pTemp = new bool[capacity];
+        T *pTemp = new T[capacity];
         
         for (int i = 0; i < size; i++)
         {
@@ -90,7 +90,7 @@ class BoolArray
         delete[] pMain;
     
         capacity = capacity * 2;
-        pMain = new bool[capacity];
+        pMain = new T[capacity];
 
         for (int i = 0; i < size; i++)
         {
@@ -102,7 +102,7 @@ class BoolArray
     }
     void InitializeDynamicArray()
     {
-        pMain = new bool[capacity];
+        pMain = new T[capacity];
     }
 
 };
@@ -112,7 +112,7 @@ void clearInputBuffer();
 int main()
 {
 
-    BoolArray bArray;
+    DynamicArray<bool> bArray;
 
     std::cout << "Bool array initialized, input \"1\" or \"true\" for true statement, \"0\" or \"false\" for false statment or anything else to stop\n";
 
