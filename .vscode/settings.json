@@ -55,7 +55,19 @@
         "string": "cpp",
         "fstream": "cpp",
         "iomanip": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "xtree": "cpp",
+        "unordered_set": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "xhash": "cpp",
+        "chrono": "cpp",
+        "forward_list": "cpp",
+        "ratio": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     },
     "cmake.configureOnOpen": false
 }

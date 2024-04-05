@@ -1,4 +1,4 @@
-# Install script for directory: D:/_Coding/CMake_HW_test
+# Install script for directory: D:/Projects/Github/from-the-beginning/CMake_HW_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/_Coding/CMake_HW_test/bin/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Projects/Github/from-the-beginning/CMake_HW_test/bin/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

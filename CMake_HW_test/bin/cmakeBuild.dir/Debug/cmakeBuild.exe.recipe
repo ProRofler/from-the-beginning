@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\_Coding\CMake_HW_test\bin\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>D:\Projects\Github\from-the-beginning\CMake_HW_test\bin\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\_Coding\CMake_HW_test\bin\Debug\cmakeBuild.exe</FullPath>
+      <FullPath>D:\Projects\Github\from-the-beginning\CMake_HW_test\bin\Debug\cmakeBuild.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

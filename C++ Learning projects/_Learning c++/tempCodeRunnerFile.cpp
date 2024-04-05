@@ -1,11 +1,24 @@
-// Общий шаблон класса
-template <typename T, int size>
-class Array {
-    // Реализация общего класса
+#include <iostream>
+#include <string>
+
+using std::string;
+
+union UTMP
+{
+    float a;
+    string b;
 };
 
-// Частичная специализация для size == 0
-template <typename T>
-class Array<T, 0> {
-    // Специализированная реализация для нулевого размера
-};
+
+int main() {
+    UTMP * tmp;
+
+    //tmp -> a = 1.1f;
+    tmp-> b = "HEEEEEEYA";
+
+    string added = [](const string &str){return str + " " + "LAMBDAED";};
+
+    std::cout << added(tmp->b) << '\n';
+
+    return 0;
+}
