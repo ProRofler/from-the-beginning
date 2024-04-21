@@ -6,9 +6,9 @@ hello = "Hello python"
 
 k = 1, 2, 3
 
-print(k[25])
+print(k[2])
 
 j = 0
 while j <= 100:
-    #print ("while loop " + hello + " " + str(j))
+    print ("while loop " + hello + " " + str(j))
     j = j + 1

@@ -1,24 +1,25 @@
 #include <iostream>
-#include <string>
 
-using std::string;
-
-union UTMP
-{
-    float a;
-    string b;
+class Base {
+public:
+    virtual void print() const {
+        std::cout << "Printing from Base class" << std::endl;
+    }
 };
 
+class Derived : public Base {
+public:
+    void print() const override {
+        std::cout << "Printing from Derived class" << std::endl;
+    }
+};
+
+void processObject(Base& obj) {
+    obj.print(); // Вызов метода print() объекта obj
+}
 
 int main() {
-    UTMP * tmp;
-
-    //tmp -> a = 1.1f;
-    tmp-> b = "HEEEEEEYA";
-
-    string added = [](const string &str){return str + " " + "LAMBDAED";};
-
-    std::cout << added(tmp->b) << '\n';
-
+    Derived derivedObj;
+    processObject(derivedObj); // Передача объекта производного класса в функцию processObject
     return 0;
 }

@@ -69,5 +69,6 @@
         "stop_token": "cpp",
         "thread": "cpp"
     },
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "D:/Projects/Github/from-the-beginning/CMake_HW_test"
 }
