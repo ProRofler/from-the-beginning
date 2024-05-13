@@ -1,3 +1,0 @@
-D:/Projects/Github/from-the-beginning/CMake_HW_test/bin/CMakeFiles/cmakeBuild.dir
-D:/Projects/Github/from-the-beginning/CMake_HW_test/bin/CMakeFiles/ALL_BUILD.dir
-D:/Projects/Github/from-the-beginning/CMake_HW_test/bin/CMakeFiles/ZERO_CHECK.dir
