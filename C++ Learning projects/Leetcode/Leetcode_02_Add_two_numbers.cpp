@@ -22,10 +22,25 @@ public:
 };
 
 
+void deleteList(ListNode* head) {
+    ListNode* current = head;
+    while (current != nullptr) {
+        ListNode* next = current->next;
+        delete current;
+        current = next;
+    }
+}
+
 int main(){
 
-    Solution::addTwoNumbers();    
+    ListNode * l1 = new ListNode(4, new ListNode(7, new ListNode(3, nullptr)));
+    ListNode * l2 = new ListNode(5, new ListNode(2, new ListNode(4, nullptr)));
 
+    Solution::addTwoNumbers(l1, l2);    
+
+
+    deleteList(l1);
+    deleteList(l2);
 
     return 0;
 }

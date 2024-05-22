@@ -10,6 +10,15 @@
      std::cout << __PRETTY_FUNCTION__;
  }
 
+struct SIncaps
+{
+private:
+    int a = 25;
+};
+
+
+
+
 #define UNUSED(variable) (void)variable
 
 int main() {
@@ -24,8 +33,12 @@ int main() {
     std::vector<std::string> list_1 {"One", "Two", "Three"};
     std::vector<std::string> list_2;
 
+    SIncaps I;
+
     list_2.push_back(list_1.back());
     list_1.pop_back();
+
+    //I.a = 14;
 
     std::cout << list_2.front() << ' ' << list_1.back();
 
