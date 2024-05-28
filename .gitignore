@@ -43,3 +43,4 @@ build/
 
 # Project specific
 binance_sample.txt
+*.exe

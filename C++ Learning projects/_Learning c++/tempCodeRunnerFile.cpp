@@ -42,7 +42,5 @@ int main() {
 
     std::cout << list_2.front() << ' ' << list_1.back();
 
-
-
     return 0;
 }
