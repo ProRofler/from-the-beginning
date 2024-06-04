@@ -1,3 +1,5 @@
+#include <iostream>
+#include <memory>
 
   struct ListNode {
       int val;
@@ -9,15 +11,11 @@
 
 };
 
-
-#include <iostream>
-
-
-
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         
+        return l1;
     }
 };
 
@@ -33,10 +31,12 @@ void deleteList(ListNode* head) {
 
 int main(){
 
+    const auto sol = std::make_unique<Solution>;
+
     ListNode * l1 = new ListNode(4, new ListNode(7, new ListNode(3, nullptr)));
     ListNode * l2 = new ListNode(5, new ListNode(2, new ListNode(4, nullptr)));
 
-    Solution::addTwoNumbers(l1, l2);    
+    sol().get()->addTwoNumbers(l1, l2);    
 
 
     deleteList(l1);
