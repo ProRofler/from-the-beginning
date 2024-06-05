@@ -3,7 +3,6 @@
 
 //main abstract product, this is interface
 class product{
-
  public:
     product() = default;
     ~product() = default;
@@ -59,11 +58,17 @@ class creator_2 : public creator{
 
 int main(){
 
-const auto product_1_result = std::make_unique<creator_1>();
-const auto product_2_result = std::make_unique<creator_2>();
+const auto product_1_creator = std::make_unique<creator_1>();
+const auto product_2_creator = std::make_unique<creator_2>();
 
-product_1_result->make_action();
-product_2_result->make_action();
+product_1_creator->make_action();
+product_2_creator->make_action();
+
+const auto product_1_result = product_1_creator->create();
+const auto product_2_result = product_2_creator->create();
+
+product_1_result->action();
+product_2_result->action();
 
     return 0;
 }
