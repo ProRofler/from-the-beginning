@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <utility>
+#include <memory>
 
      #define __PRETTY_FUNCTION__ __FUNCTION__ 
 
@@ -26,6 +27,14 @@ int main() {
     int i = 0;
     // foo();
     UNUSED(i);
+
+    const auto pi = std::make_unique<SIncaps>();
+    // const auto pi2 = pi;
+
+    const auto si = std::shared_ptr<SIncaps>();
+    const auto si2 = si;
+
+
 
     const auto size = 4ull;
     int arr[size];
