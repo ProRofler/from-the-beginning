@@ -12,7 +12,7 @@ struct Schiz
     std::string Name;
     int Age;
     bool OnPills = true; //you can set the defaul value for a variable in a struct
-};
+} PatientZero; //we can declare the variable of the sctructure type right away
 
 
 
@@ -53,6 +53,9 @@ int main()
                 << Patient2.Age << '\n'
                 << Patient2.OnPills << "\n\n";
 
+    std::cout   << PatientZero.Name << '\n'
+                << PatientZero.Age << '\n'
+                << PatientZero.OnPills << "\n\n";
 
     if (pSchiz)
     {
