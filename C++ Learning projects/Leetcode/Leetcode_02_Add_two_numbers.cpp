@@ -13,37 +13,44 @@ struct ListNode {
 class Solution {
  public:
   ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    std::string val_1;
-    std::string val_2;
+    ListNode* head = new ListNode(0);
+    ListNode* headIt = new ListNode(0);
 
-    ListNode* current = l1;
-    while (current != nullptr) {
-      ListNode* next = current->next;
-      val_1.insert(val_1.begin(), current->val + '0');
-      current = next;
-    }
+    ListNode* dummy = new ListNode(0);
 
-    current = l2;
-    while (current != nullptr) {
-      ListNode* next = current->next;
-      val_2.insert(val_2.begin(), current->val + '0');
-      current = next;
-    }
+    head = headIt;
 
-    int calc = std::stoi(val_1) + std::stoi(val_2);
-    val_2 = std::to_string(calc);
+    int carry = 0;
 
-    ListNode* result = nullptr;
+    while (l1 != dummy || l2 != dummy || carry != 0) {
+      int sum = 0;
+      int val_1 = l1 == nullptr ? 0 : l1->val;
+      int val_2 = l2 == nullptr ? 0 : l2->val;
 
-    for (auto i = calc % 10; i > 0; i--) {
-      if (i = calc % 10){
-        ListNode* last = new ListNode(val_2.at(0)-'0');
+      sum = val_1 + val_2 + carry;
+      carry = sum >= 10 ? 1 : 0;
 
+      headIt->val = sum >= 10 ? sum % 10 : sum;
+
+      if (l1->next || l2->next || carry != 0) {
+        headIt->next = new ListNode();
+        headIt = headIt->next;
       }
 
+      if (l1->next) {
+        l1 = l1->next;
+      } else {
+        l1 = dummy;
+      }
+
+      if (l2->next) {
+        l2 = l2->next;
+      } else {
+        l2 = dummy;
+      }
     }
 
-    return result;
+    return head;
   }
 };
 
@@ -59,8 +66,8 @@ void deleteList(ListNode* head) {
 int main() {
   const auto sol = std::make_unique<Solution>;
 
-  ListNode* l1 = new ListNode(4, new ListNode(7, new ListNode(3, nullptr)));
-  ListNode* l2 = new ListNode(5, new ListNode(2, new ListNode(4, nullptr)));
+  ListNode* l1 = new ListNode(2, new ListNode(4, new ListNode(3, nullptr)));
+  ListNode* l2 = new ListNode(5, new ListNode(6, new ListNode(4, nullptr)));
 
   sol().get()->addTwoNumbers(l1, l2);
 
