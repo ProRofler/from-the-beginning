@@ -4,11 +4,6 @@
 using namespace std;
 
 int lengthOfLongestSubstring(string s) {
-  if (s.empty())
-    return 0;
-
-  else if (s.size() == 1)
-    return 1;
 
   string m_substr;
   string t_substr;
@@ -30,7 +25,7 @@ int lengthOfLongestSubstring(string s) {
 }
 
 int main() {
-  cout << lengthOfLongestSubstring("fdsjfkhj") << " : result\n";
+  cout << lengthOfLongestSubstring("aa") << " : result\n";
 
   return 0;
 }
