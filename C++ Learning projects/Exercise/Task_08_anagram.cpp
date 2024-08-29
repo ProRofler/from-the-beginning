@@ -9,11 +9,11 @@ bool is_anagram(const std::string& a, const std::string& b) {
   std::vector<int> chars_2(256, 0);
 
   for (int i = 0; i < a.length(); i++) {
-    chars_1.at(a.at(i)) = chars_1.at(a.at(i)) + 1;
+    chars_1.at(a.at(i)) += 1;
   }
 
   for (int i = 0; i < b.length(); i++) {
-    chars_2.at(b.at(i)) = chars_2.at(b.at(i)) + 1;
+    chars_2.at(b.at(i)) += 1;
   }
 
   return chars_1 == chars_2 ? true : false;
